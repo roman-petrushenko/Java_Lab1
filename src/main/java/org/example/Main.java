@@ -5,11 +5,13 @@ public class Main {
     {
         try {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter integer numbers:");
+        System.out.print("Enter non-negative integer numbers:");
         String str1 = scanner.nextLine();
 
         StringCalculator string_calc = new StringCalculator();
-        System.out.println("The sum of entered numbers: " + string_calc.add(str1));
+        int r1 = string_calc.add(str1);
+        if (r1 != -1){
+        System.out.println("The sum of entered numbers: " + r1);}
         scanner.close();}
         catch (Exception exc) {
             System.out.println(exc);
