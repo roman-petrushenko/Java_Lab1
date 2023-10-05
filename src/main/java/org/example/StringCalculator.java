@@ -20,20 +20,28 @@ public class StringCalculator {
         int j = 0;
         //String[] arr2;
         ArrayList<String> arr_lst = new ArrayList<>();
+        ArrayList<String> arr2_lst = new ArrayList<>();
+        //for (int i = 0; i<arr1.length; i+=1){
+
+        //}
         for (int i = 0; i<arr1.length; i+=1){
             if (Integer.parseInt(arr1[i])<0){
                 arr_lst.add(arr1[i]);
                 j+=1;
             }
         }
+        for (String s : arr1) {
+            if (Integer.parseInt(s) <= 1000) arr2_lst.add(s);
+        }
+
         if (!arr_lst.isEmpty())
         {
             System.out.print("Exception. You entered negative numbers:");
             for (String i1: arr_lst) System.out.print(i1 + " ");
             return -1;
         }
-        for (int i = 0; i<arr1.length; i+=1){
-            r+=Integer.parseInt(arr1[i]);
+        for (int i = 0; i< arr2_lst.size(); i+=1){
+            r+=Integer.parseInt(arr2_lst.get(i));
         }
         return r;
         }

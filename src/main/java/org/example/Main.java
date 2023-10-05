@@ -5,7 +5,7 @@ public class Main {
     {
         try {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter non-negative integer numbers:");
+        System.out.print("Enter non-negative integer numbers (<=1000):");
         String str1 = scanner.nextLine();
 
         StringCalculator string_calc = new StringCalculator();
