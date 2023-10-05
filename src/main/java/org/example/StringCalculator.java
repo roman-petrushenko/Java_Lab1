@@ -5,10 +5,11 @@ public class StringCalculator {
         int r = 0;
         if (s1.isEmpty() == true) return r;
         s1 = s1.replace("/n",",");
+        //s1 = s1.replace("",",");
         String[] arr1;
         //String[] arr2;
-        if (s1.startsWith("//")){
-            String regex1 = s1.substring(2, s1.indexOf(","));
+        if (s1.startsWith("//[")){
+            String regex1 = s1.substring(3, s1.indexOf("]"));
                 int k = s1.indexOf(",")+1;
                 s1 = s1.substring(k);
                 if (s1.isEmpty() == true) return r;
