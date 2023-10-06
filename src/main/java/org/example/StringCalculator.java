@@ -22,18 +22,19 @@ public class StringCalculator {
 
                 s2 = s1.substring(3, k-2);
                 s1 = s1.substring(k);
+                if (s1.isEmpty() == true) return r;
                 s2 = s2.replace("][",",");
                 arr2 = s2.split(",");
-                System.out.println(s1);
-                System.out.println(s2);
+                //System.out.println(s1);
+               // System.out.println(s2);
                 Arrays.sort(arr2, Collections.reverseOrder());
-                for (String i3:arr2) System.out.println(i3);
+                //for (String i3:arr2) System.out.println(i3);
                 for (String i2: arr2) s1 = s1.replace(i2,",");
             // s3= s3 + i2 + "|";
                     //s1 = s1.replace(i2,",");
                 //s3 = s3.substring(1);
 
-                System.out.println(s1);
+                //System.out.println(s1);
                 //s1 = s1.replace(regex1,",");
                 arr1 = s1.split(",");}
                 //arr1 = s1.split(s3+",");}
