@@ -1,5 +1,8 @@
 package org.example;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class StringCalculator {
     public int add(String s1) {
         int r = 0;
@@ -7,14 +10,33 @@ public class StringCalculator {
         s1 = s1.replace("/n",",");
         //s1 = s1.replace("",",");
         String[] arr1;
+        String[] arr2;
         //String[] arr2;
         if (s1.startsWith("//[")){
-            String regex1 = s1.substring(3, s1.indexOf("]"));
+            //String regex1 = s1.substring(3, s1.indexOf("]"));
                 int k = s1.indexOf(",")+1;
-                s1 = s1.substring(k);
+                //s1 = s1.substring(k);
                 if (s1.isEmpty() == true) return r;
-                s1 = s1.replace(regex1,",");
+                String s2;
+                //String s3 = "";
+
+                s2 = s1.substring(3, k-2);
+                s1 = s1.substring(k);
+                s2 = s2.replace("][",",");
+                arr2 = s2.split(",");
+                System.out.println(s1);
+                System.out.println(s2);
+                Arrays.sort(arr2, Collections.reverseOrder());
+                for (String i3:arr2) System.out.println(i3);
+                for (String i2: arr2) s1 = s1.replace(i2,",");
+            // s3= s3 + i2 + "|";
+                    //s1 = s1.replace(i2,",");
+                //s3 = s3.substring(1);
+
+                System.out.println(s1);
+                //s1 = s1.replace(regex1,",");
                 arr1 = s1.split(",");}
+                //arr1 = s1.split(s3+",");}
         else {arr1 = s1.split(",");}
         //arr2[0] = "";
         //  arr2[0] = 0;
