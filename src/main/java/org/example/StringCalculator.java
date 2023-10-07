@@ -7,7 +7,7 @@ public class StringCalculator {
     public int add(String s1) {
         int r = 0;
         if (s1.isEmpty() == true) return r;
-        s1 = s1.replace("/n",",");
+        s1 = s1.replace("\n",",");
         //s1 = s1.replace("",",");
         String[] arr1;
         String[] arr2;
